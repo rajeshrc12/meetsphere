@@ -168,7 +168,14 @@
 .cl-headerTitle {
   display: none;
 }
-
+.str-video__composite-button
+  .str-video__composite-button__button-group
+  .str-video__menu-toggle-button {
+  padding: 0;
+  margin-left: -30px;
+  margin-right: 8px;
+  height: 20px;
+}
 /* animation */
 
 .show-block {
