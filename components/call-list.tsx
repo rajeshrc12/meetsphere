@@ -60,7 +60,6 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
     };
     if ((type = "recordings")) fetchRecording();
   }, [type, callRecordings]);
-  console.log(callRecordings, recordings);
   if (isLoading) return <Loader />;
 
   return (
@@ -77,9 +76,9 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
                 : "/icons/recordings.svg"
             }
             title={
-              (meeting as Call)?.state?.custom.description.substring(0, 20) ||
+              (meeting as Call)?.state?.custom?.description?.substring(0, 20) ||
               meeting?.filename?.substring(0, 20) ||
-              "No description"
+              "Personal meeting"
             }
             date={
               (meeting as Call).state?.startsAt?.toLocaleString() ||
