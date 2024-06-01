@@ -19,7 +19,7 @@ interface MeetingModalProps {
   buttonText?: string;
   image?: string;
   handleClick?: () => void;
-  buttonIcon: string;
+  buttonIcon?: string;
   children?: ReactNode;
 }
 
@@ -53,7 +53,7 @@ const MeetingModal = ({
           >
             {buttonText || (
               <Image
-                src={buttonIcon}
+                src={buttonIcon!}
                 alt="button icon"
                 width={13}
                 height={13}
